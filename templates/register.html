@@ -3,13 +3,13 @@
 
 <h4 class ="center-align  light-blue-text text-darken-4">Register</h4>
     <div class="row">
-        <form class="col s12 m8 offset-m2" method= "POST" action= "{{url_for('register')}}">
+        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('register')}}">
             <div class="card-panel">
                  <!--Full Name-->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user prefix light-blue-text text-darken-4"></i>
-                        <input id="name" name="name" type="text" class="validate">
+                        <input id="name" name="name" type="text" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" class="validate">
                         <label for="name">Full Name</label>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-envelope-open-text prefix light-blue-text text-darken-4"></i>
-                        <input id="email" name="email" type="text" class="validate">
+                        <input id="email" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="validate">
                         <label for="email">Email address</label>
                     </div>
                 </div>
@@ -26,8 +26,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                        <input id="date" name="date" type="text" class="validate">
-                        <label for="date">Date of Birth</label>
+                        <input id="bdate" name="bdate" type="text" class="datepicker" required>
+                        <label for="bdate">Date of Birth</label>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-file-medical prefix light-blue-text text-darken-4"></i>
                         <input id="health" name="health" type="text" class="validate">
-                        <label for="health">Health Card 000-AAA </label>
+                        <label for="health">Health Card 000AAA </label>
                     </div>
                 </div>
 
@@ -50,6 +50,7 @@
                 </div>
 
                  <!--Town-->
+                 
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-building prefix light-blue-text text-darken-4"></i>
@@ -71,7 +72,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
-                        <input id="username" name="username" type="text" class="validate">
+                        <input id="username" name="username" type="text" minlength="5"  maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
                         <label for="username">Username</label>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
-                        <input id="password" name ="password" type="password" class="validate">
+                        <input id="password" name ="password" type="password" minlength="5"  maxlength="15"  pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
                         <label for="password">Password</label>
                     </div>
                 </div>
