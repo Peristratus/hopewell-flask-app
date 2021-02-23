@@ -2,6 +2,8 @@ var currYear = (new Date()).getFullYear();
 
 $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
+    $('.dropdown-trigger').dropdown();
+    $('.collapsible').collapsible();
     $(".datepicker").datepicker({
     defaultDate: new Date(currYear-5,1,31),
     // setDefaultDate: new Date(2000,01,31),
