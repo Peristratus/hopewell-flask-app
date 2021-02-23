@@ -130,7 +130,7 @@ def add_task():
         }
         mongo.db.task.insert_one( task)
         flash("Task Sucessfully Added")
-        return redirect(url_for("get_task"))
+        return redirect(url_for("get_tasks"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_task.html", categories=categories)
