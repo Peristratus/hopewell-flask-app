@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     $('.dropdown-trigger').dropdown();
     $('.collapsible').collapsible();
+     $('.tooltipped').tooltip();
     $(".datepicker").datepicker({
     defaultDate: new Date(currYear-5,1,31),
     // setDefaultDate: new Date(2000,01,31),
