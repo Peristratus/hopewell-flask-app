@@ -32,7 +32,7 @@
                     <li><a href="{{url_for('get_tasks')}}">Home</a></li>
                     {% if session.user %}
                         <li><a href="{{url_for('profile', username=session['user'])}}" >Profile</a></li>
-                        <li><a href="#" >New Task</a></li>
+                        <li><a href="{{url_for('add_task')}}" >New Task</a></li>
                         <li><a href="#" >Manage Categories</a></li>
                         <li><a href="{{url_for('logout')}}" >Logout</a></li>
                     {% else %}
@@ -46,14 +46,19 @@
 
             <!--Mobile side Nav-->
             <ul class="sidenav" id="mobile-demo">
+                <!-- Dropdown Structure -->
+                    <ul id="dropdown2" class="dropdown-content">
+                        <li><a href="#!"><i class="fas fa-user-shield indigo-text darken-4"></i></a></li>
+                        <li><a href="#!"><i class="fas fa-stethoscope indigo-text darken-4"></i></a></li>
+                    </ul>
+                    <a class="dropdown-trigger btn light-blue darken-4" href="#" data-target="dropdown2">Admin</a>
                     <li><h4 class="center-align light-blue-text text-darken-4">HopeWell</h4>
                     </li>
                     <li ><a href="{{url_for('get_tasks')}}">Home</a></li>
                     {% if session.user %}
                         <li><a href="{{url_for('profile', username=session['user'])}}" >Profile</a></li>
-                        <li><a href="#" >New Task</a></li>
+                        <li><a href="{{url_for('add_task')}}" >New Task</a></li>
                         <li><a href="#" >Manage Categories</a></li>
-                         <li><a href="#">Admin</a></li>
                         <li><a href="{{url_for('logout')}}" >Logout</a></li>
                     {% else %}
                         <li><a href="{{url_for('login')}}" >Login</a></li>
