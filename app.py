@@ -74,8 +74,15 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
+                role = ""
+                if existing_user["role"] == "doctor":
+                    role== "doctor" 
+                elif existing_user["role"] == "admin":
+                    role== "admin" 
+                elif existing_user["role"] == "patient":
+                    role== "patient" 
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "profile", username=session["user"], role=role))
 
             else:
                 #invalid user name
@@ -86,6 +93,8 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for('login'))
     return render_template("login.html")
+        
+
 
 
 @app.route("/profile/<username>", methods=["GET","POST"])
@@ -107,8 +116,22 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-@app.route("/add_task")
+@app.route("/add_task",  methods=["GET", "POST"])
 def add_task():
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        task = {
+            "category_name": request.form.get("category_name"),
+            "task_name": request.form.get("task_name"),
+            "task_description": request.form.get("task_description"),
+            "is_urgent": is_urgent,
+            "due_date": request.form.get("due_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.task.insert_one( task)
+        flash("Task Sucessfully Added")
+        return redirect(url_for("get_task"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_task.html", categories=categories)
 
