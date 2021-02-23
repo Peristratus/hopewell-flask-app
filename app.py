@@ -128,7 +128,7 @@ def add_task():
             "due_date": request.form.get("due_date"),
             "created_by": session["user"]
         }
-        mongo.db.task.insert_one( task)
+        mongo.db.tasks.insert_one( task)
         flash("Task Sucessfully Added")
         return redirect(url_for("get_tasks"))
 
