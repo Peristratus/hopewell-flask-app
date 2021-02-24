@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content%}
 
-<h4 class ="center-align  light-blue-text text-darken-4">Register</h4>
+<h4 class ="center-align  light-blue-text text-darken-4">Lab Work Form</h4>
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('register')}}">
+        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('test')}}">
             <div class="card-panel">
-                 <!--Full Name-->
+                 <!-- Doctor Full Name-->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user prefix light-blue-text text-darken-4"></i>
@@ -13,95 +13,101 @@
                         <label for="name">Full Name</label>
                     </div>
                 </div>
-                <!--Email-->
+                <!--Emp Number-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-envelope-open-text prefix light-blue-text text-darken-4"></i>
-                        <input id="email" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="validate">
-                        <label for="email">Email address</label>
+                        <i class="fas fa-user-md prefix light-blue-text text-darken-4"></i>
+                        <input id="role" name="role" type="text" pattern="^[0-9A-Z]{5}$" class="validate">
+                        <label for="role">Title </label>
                     </div>
                 </div>
 
-                <!--Date of Birth-->
+                <!--Test Date-->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                         <input id="bdate" name="bdate" type="text" class="datepicker" required>
-                        <label for="bdate">Date of Birth</label>
+                        <label for="bdate">Medical Test Date</label>
                     </div>
                 </div>
 
-                <!--Health Card-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-file-medical prefix light-blue-text text-darken-4"></i>
-                        <input id="health" name="health" type="text" pattern="^[0-9A-Z]{5}$" class="validate">
-                        <label for="health">Health Card 000AA </label>
-                    </div>
-                </div>
-
-                 <!--Address-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-address-card prefix light-blue-text text-darken-4"></i>
-                        <input id="address" name="address" type="text" class="validate">
-                        <label for="address">Address </label>
-                    </div>
-                </div>
-
-                 <!--Town-->
-                 
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-building prefix light-blue-text text-darken-4"></i>
-                        <input id="town" name="town" type="text" class="validate">
-                        <label for="town">Town</label>
-                    </div>
-                </div>
-
-                 <!--City-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-city prefix light-blue-text text-darken-4"></i>
-                        <input id="city" name="city" type="text" class="validate">
-                        <label for="city">City</label>
-                    </div>
-                </div>
-
-                 <!--username-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
-                        <input id="username" name="username" type="text" minlength="5"  maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
-                        <label for="username">Username</label>
-                    </div>
-                </div>
-                 <!--password-->
+                 <!--Patient-->
                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
-                        <input id="password" name ="password" type="password" minlength="5"  maxlength="15"  pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
-                        <label for="password">Password</label>
+                <div class="input-field col s12">
+                     <i class="fas fa-hospital-user prefix light-blue-text text-darken-4"></i>
+                    <select id= "category_name" name= "category_name" class="validate" required>
+                        <option value="" disabled selected>Choose category</option>
+                        {% for category in categories %}
+                         <option value="{{category.category_name}}">{{category.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                    <label for= "category_name">Task Category</label>
+                </div>
+            </div>
+
+                <!--Test 1-->
+                <div class="row">
+                    <div class="col s12">
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Basic Metabolic Panel</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Brain natriuretic peptide </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span> Complete Blood Count </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Ferritin </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Glycated Hemoglobin</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Lipid Panel</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Liver Function Test </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Tyroid Function Test </span>
+                            </label>
+                        </p>
                     </div>
                 </div>
-                <!--register-->
+
+                <!--submit-->
                 <div class="row">
                     <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
+                        Submit <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
            </div>
         </form>
     </div>
-
-    <div class="row">
-        <div class="col s12">
-           <p class="center-align">
-               Already Registered ? 
-               <a href="{{url_for('login')}}" class="light-blue-text text-darken-4">Login</a>
-           </p>
-        </div>
-   </div>
             
 
 
