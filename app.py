@@ -25,10 +25,20 @@ def home():
     return render_template('index.html')
 
 
+@app.route("/test")
+def test():
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+    return render_template('labwork.html', role=role)
+     
+
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
-    return render_template("tasks.html", tasks=tasks)
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+    return render_template("tasks.html", tasks=tasks, role=role)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -74,16 +84,8 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
-                role = ""
-                if existing_user["role"] == "doctor":
-                    role== "doctor" 
-                elif existing_user["role"] == "admin":
-                    role== "admin" 
-                elif existing_user["role"] == "patient":
-                    role== "patient" 
                 return redirect(url_for(
-                    "profile", username=session["user"], role=role))
-
+                    "profile", username=session["user"]))
             else:
                 #invalid user name
                 flash("Incorrect Username and/or Password")
@@ -100,11 +102,17 @@ def login():
 @app.route("/profile/<username>", methods=["GET","POST"])
 def profile(username):
     # grab the session user's username from db
+    existing_user = mongo.db.users.find_one(
+        {"username": session["user"]})
+    
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    if session["user"]:
-        return render_template("profile.html", username = username)
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+
+    if existing_user:
+        return render_template("profile.html", username = username, role = role)
     
     return redirect(url_for("login"))
 
@@ -133,7 +141,9 @@ def add_task():
         return redirect(url_for("get_tasks"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_task.html", categories=categories)
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+    return render_template("add_task.html", categories=categories, role=role)
 
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
@@ -166,7 +176,9 @@ def delete_task(task_id):
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+    return render_template("categories.html", categories=categories, role = role)
 
 @app.route("/add_category", methods=["GET","POST"])
 def add_category():
@@ -176,9 +188,11 @@ def add_category():
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
+       
         return redirect(url_for('get_categories'))
-
-    return render_template("add_category.html")
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+    return render_template("add_category.html", role=role)
 
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
