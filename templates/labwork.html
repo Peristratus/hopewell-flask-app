@@ -13,50 +13,45 @@
                         <label for="name">Full Name</label>
                     </div>
                 </div>
-                <!--Emp Number-->
+                <!--Title-->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-md prefix light-blue-text text-darken-4"></i>
-                        <input id="role" name="role" type="text" pattern="^[0-9A-Z]{5}$" class="validate">
-                        <label for="role">Title </label>
+                        <input id="title" name="title" type="text" pattern="^([a-zA-Z]{5,10})" class="validate">
+                        <label for="title">Title</label>
                     </div>
                 </div>
-
                 <!--Test Date-->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                        <input id="bdate" name="bdate" type="text" class="datepicker" required>
-                        <label for="bdate">Medical Test Date</label>
+                        <input id="due_date" name="due_date" type="text" class=" datepicker validate" required>
+                    <label for="due_date">Medical Test Date</label>
                     </div>
                 </div>
 
-                 <!--Patient-->
-               <div class="row">
-                <div class="input-field col s12">
-                     <i class="fas fa-hospital-user prefix light-blue-text text-darken-4"></i>
-                    <select id= "category_name" name= "category_name" class="validate" required>
-                        <option value="" disabled selected>Choose category</option>
-                        {% for category in categories %}
-                         <option value="{{category.category_name}}">{{category.category_name}}</option>
-                        {% endfor %}
-                    </select>
-                    <label for= "category_name">Task Category</label>
+                 
+               <!--Patient Id Number -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-id-card prefix light-blue-text text-darken-4"></i>
+                        <input id="id_num" name="id_num" type="text" pattern="^[0-9A-Z]{5}$" class="validate">
+                        <label for="id_num"> Patient Id Number </label>
+                    </div>
                 </div>
-            </div>
 
                 <!--Test 1-->
                 <div class="row">
                     <div class="col s12">
                         <p>
                             <label>
-                                <input type="checkbox" />
-                                <span>Basic Metabolic Panel</span>
+                                <input type="checkbox" name="checkbox" />
+                                <p>Basic Metabolic Panel</p>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" name="checkbox" />
                                 <span>Brain natriuretic peptide </span>
                             </label>
                         </p>
