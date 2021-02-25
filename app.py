@@ -25,11 +25,25 @@ def home():
     return render_template('index.html')
 
 
-@app.route("/test")
+@app.route("/test", methods=["GET", "POST"])
 def test():
+    if request.method == "POST":
+        task = {
+            "name": request.form.get("name"),
+            "test_date": request.form.get("due_date"),
+            "pat_idnum": request.form.get("id_num"),
+            "title":request.form.get("title"),
+            "test_description": request.form.get("checkbox"),
+            "created_by": session["user"]
+        }
+        mongo.db.medtest.insert_one( task)
+        flash("Test Sucessfully Submited")
+        return redirect(url_for("test"))
+
+    categories = mongo.db.medtest.find().sort("name", 1)
     role = mongo.db.users.find_one(
         {"username": session["user"]})["role"]
-    return render_template('labwork.html', role=role)
+    return render_template("labwork.html", categories=categories, role=role)
      
 
 @app.route("/get_tasks")
@@ -56,7 +70,7 @@ def register():
             "name": request.form.get("name").lower(),
             "email": request.form.get("email").lower(),
             "bdate": request.form.get("bdate").lower(),
-            "health": request.form.get("health").lower(),
+            "id_num": request.form.get("").lower(),
             "address": request.form.get("address").lower(),
             "town": request.form.get("town").lower(),
             "city": request.form .get("city").lower()
@@ -163,6 +177,7 @@ def edit_task(task_id):
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
+
     return render_template("edit_task.html", task=task, categories=categories)
 
 
