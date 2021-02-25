@@ -36,6 +36,10 @@ def services():
 def depart():
     return render_template('departments.html')
 
+@app.route("/blog")
+def blog():
+    return render_template('blog.html')
+
 
 @app.route("/test", methods=["GET", "POST"])
 def test():
