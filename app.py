@@ -28,16 +28,31 @@ def home():
 def aboutus():
     return render_template('about.html')
 
+@app.route("/services")
+def services():
+    return render_template('services.html')
+
+@app.route("/depart")
+def depart():
+    return render_template('departments.html')
+
 
 @app.route("/test", methods=["GET", "POST"])
 def test():
     if request.method == "POST":
         task = {
             "name": request.form.get("name"),
-            "test_date": request.form.get("due_date"),
-            "pat_idnum": request.form.get("id_num"),
             "title":request.form.get("title"),
-            "test_description": request.form.get("checkbox"),
+            "test_date": request.form.get("due_date"),
+            "pat_name":request.form.get("pat_name"),
+            "pat_idnum": request.form.get("id_num"),
+            "basic_metabolic_panel": request.form.get("bmp"),
+            "brain_nautriuretic_peptide": request.form.get("bnp"),
+            "complete_blood_count": request.form.get("cbc"),
+            "glycated_hemoglobin": request.form.get("gh"),
+            "lipid_panel": request.form.get("lp"),
+            "liver_function_test": request.form.get("bnp"),
+            "tyroid_function_test": request.form.get("bnp"),
             "created_by": session["user"]
         }
         mongo.db.medtest.insert_one( task)
@@ -152,6 +167,7 @@ def add_task():
             "task_description": request.form.get("task_description"),
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
+            "id_num": request.form.get("id_num"),
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one( task)
