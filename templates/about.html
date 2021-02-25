@@ -54,16 +54,16 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <div class="mb-0 site-logo"><a href="{url_for('home')}}" class="mb-0">HopeWell<span class="text-primary">.</span> </a></div>
+            <div class="mb-0 site-logo"><a href="{{url_for('home')}}" class="mb-0">HopeWell<span class="text-primary">.</span> </a></div>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="{url_for('home')}}" class="nav-link ">Home</a></li>
+                <li><a href="{{url_for('home')}}" class="nav-link ">Home</a></li>
                 <li class="has-children">
-                  <a href="services.html" class="nav-link">Services</a>
+                  <a href="{{url_for('services')}}" class="nav-link">Services</a>
                   <ul class="dropdown">
                     <li><a href="#" class="nav-link">General Surgery</a></li>
                     <li><a href="#" class="nav-link">Opthalmology Procedures</a></li>
@@ -81,7 +81,7 @@
                   </ul>
                 </li>
 
-                <li><a href="departments.html" class=" nav-link">Departments</a></li>
+                <li><a href="{{url_for('depart')}}" class=" nav-link">Departments</a></li>
                <li><a href="{{url_for('aboutus')}}" class="nav-link">About Us</a></li>
 
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
