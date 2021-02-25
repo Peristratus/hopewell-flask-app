@@ -43,7 +43,7 @@ def blog():
 
 @app.route("/contact")
 def contact():
-    return render_template('contact')
+    return render_template('contact.html')
 
 
 @app.route("/test", methods=["GET", "POST"])
