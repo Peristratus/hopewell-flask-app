@@ -41,6 +41,11 @@ def blog():
     return render_template('blog.html')
 
 
+@app.route("/contact")
+def contact():
+    return render_template('contact')
+
+
 @app.route("/test", methods=["GET", "POST"])
 def test():
     if request.method == "POST":
