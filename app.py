@@ -171,12 +171,13 @@ def add_task():
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         task = {
-            "category_name": request.form.get("category_name"),
-            "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description"),
+            "category_name": request.form.get("category_name").lower(),
+            "task_name": request.form.get("task_name").lower(),
+            "task_description": request.form.get("task_description").lower(),
             "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
-            "id_num": request.form.get("id_num"),
+            "due_date": request.form.get("due_date").lower(),
+            "dr_name": request.form.get("dr_name").lower(),
+            "pat_name": request.form.get("pat_name").lower(),
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one( task)
