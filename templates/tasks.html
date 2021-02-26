@@ -11,7 +11,6 @@
                 <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                     <div class="col s3">
                         <i class="fas fa-caret-down"></i>
-                        
                             <a href="{{url_for('delete_task', task_id=task._id)}}" class="btn-small green accent-4">Done</a>
                             <a href="{{url_for('edit_task', task_id=task._id)}}" class="btn-small light-blue lighten-4">Edit</a>
                        
@@ -24,7 +23,6 @@
                         data-tooltip="URGENT!"></i>
                         {% endif %}
                     </div>
-
                      
                 </div>
                 <div class="collapsible-body">
@@ -34,13 +32,8 @@
                 </div>
             </li>
                  {% endif %}
-
                  
-                    
-
             {% endfor %}
             </ul>
-
-           
     
 {% endblock %}
