@@ -50,18 +50,18 @@ def contact():
 def test():
     if request.method == "POST":
         task = {
-            "name": request.form.get("name"),
-            "title":request.form.get("title"),
-            "test_date": request.form.get("due_date"),
-            "pat_name":request.form.get("pat_name"),
-            "pat_idnum": request.form.get("id_num"),
-            "basic_metabolic_panel": request.form.get("bmp"),
-            "brain_nautriuretic_peptide": request.form.get("bnp"),
-            "complete_blood_count": request.form.get("cbc"),
-            "glycated_hemoglobin": request.form.get("gh"),
-            "lipid_panel": request.form.get("lp"),
-            "liver_function_test": request.form.get("bnp"),
-            "tyroid_function_test": request.form.get("bnp"),
+            "name": request.form.get("name").lower(),
+            "title":request.form.get("title").lower(),
+            "test_date": request.form.get("due_date").lower(),
+            "pat_name":request.form.get("pat_name").lower(),
+            "pat_idnum": request.form.get("id_num").lower(),
+            "basic_metabolic_panel": request.form.get("bmp").lower(),
+            "brain_nautriuretic_peptide": request.form.get("bnp").lower(),
+            "complete_blood_count": request.form.get("cbc").lower(),
+            "glycated_hemoglobin": request.form.get("gh").lower(),
+            "lipid_panel": request.form.get("lp").lower(),
+            "liver_function_test": request.form.get("bnp").lower(),
+            "tyroid_function_test": request.form.get("bnp").lower(),
             "created_by": session["user"]
         }
         mongo.db.medtest.insert_one( task)
@@ -194,11 +194,11 @@ def edit_task(task_id):
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
-            "category_name": request.form.get("category_name"),
-            "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description"),
+            "category_name": request.form.get("category_name").lower(),
+            "task_name": request.form.get("task_name").lower(),
+            "task_description": request.form.get("task_description").lower(),
             "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
+            "due_date": request.form.get("due_date").lower(),
             "created_by": session["user"]
         }
         mongo.db.tasks.update({"_id": ObjectId(task_id)},submit)
