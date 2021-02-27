@@ -46,6 +46,11 @@ def contact():
     return render_template('contact.html')
 
 
+@app.route("/chatbot")
+def chatbot():
+    return render_template('chatbot.html')
+
+
 @app.route("/test", methods=["GET", "POST"])
 def test():
     if request.method == "POST":
