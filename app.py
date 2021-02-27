@@ -103,7 +103,8 @@ def register():
             "name": request.form.get("name").lower(),
             "email": request.form.get("email").lower(),
             "bdate": request.form.get("bdate").lower(),
-            "id_num": request.form.get("").lower(),
+            "id_num": request.form.get("id_num").lower(),
+            "role": request.form.get("role").lower(),
             "address": request.form.get("address").lower(),
             "town": request.form.get("town").lower(),
             "city": request.form .get("city").lower()
