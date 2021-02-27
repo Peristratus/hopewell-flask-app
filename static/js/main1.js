@@ -40,7 +40,11 @@ function botVoice(message){
    speech.text = "Sorry, I did not understand that!";
    // Key words
    if (message.includes('how are you') || message.includes('hi') || message.includes('hello') ) {
-       speech.text = "I am fine, thanks. How are you ?";
+       speech.text = "I am fine, wellcome to Hopewell Hospital. How are you ?";
+     }  
+
+    if (message.includes('Wall-E') || message.includes('hello Wall-E') || message.includes('hi Wall-E') ) {
+       speech.text = "Wellcome to Hopewell Hospital. How can i help you today ?";
      }  
 
     if (message.includes('fine') || message.includes('ok') || message.includes('good')) {
