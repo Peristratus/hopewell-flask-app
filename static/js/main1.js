@@ -40,11 +40,15 @@ function botVoice(message){
    speech.text = "Sorry, I did not understand that!";
    // Key words
    if (message.includes('how are you') || message.includes('hi') || message.includes('hello') ) {
-       speech.text = "I am fine, wellcome to Hopewell Hospital. How are you ?";
+       speech.text = "I am fine, wellcome to Medstar Hospital. How are you ?";
      }  
 
-    if (message.includes('Wall-E') || message.includes('hello Wall-E') || message.includes('hi Wall-E') ) {
-       speech.text = "Wellcome to Hopewell Hospital. How can i help you today ?";
+    if (message.includes('Wall-E')) {
+       speech.text = "Wellcome to Medstar Hospital. Medistar is a group of physicians, nurse practitioners, physician assistants, nurses and support staff dedicated to providing a broad spectrum of primary care and multi-specialty services to patients in over ten communities in the Peel Region. How can i help you today ?";
+     }  
+
+    if (message.includes('direction') || message.includes('location') || message.includes('how do I get to Medstar Hospital')  || message.includes('how can I get to Medstar Hospital') || message.includes('located') ) {
+       speech.text = "Medstar Hospital is located at 291 cardwell street, down town Toronto opposite the Eaton Center?";
      }  
 
     if (message.includes('fine') || message.includes('ok') || message.includes('good')) {
