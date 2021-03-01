@@ -30,6 +30,7 @@
                         {% if role == "doctor" %}
                            <li><a href="{{url_for('get_categories')}}" >Manage Categories</a></li>
                            <li><a href="{{url_for('test')}}" >Lab Work </a></li>
+                           <li><a href="{{url_for('procedure')}}" > Procedures </a></li>
                         {% endif %}
                         <li><a href="{{url_for('logout')}}" >Logout</a></li>
                     {% else %}
@@ -49,6 +50,8 @@
                         <li><a href="{{url_for('add_task')}}" >New Task</a></li>
                         {% if session.user|lower == "doctor"|lower %}
                                 <li><a href="{{url_for('get_categories')}}" >Manage Categories</a></li>
+                                <li><a href="{{url_for('test')}}" >Lab Work </a></li>
+                                <li><a href="{{url_for('procedure')}}" > Procedures </a></li>
                         {% endif %}
                         <li><a href="{{url_for('logout')}}" >Logout</a></li>
                     {% else %}
