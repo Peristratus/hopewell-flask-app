@@ -3,7 +3,9 @@
 <head>
   <title>Medstar &mdash; Website Template by Colorlib</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+  
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/fonts/icomoon/style.css">
@@ -23,6 +25,8 @@
   <link rel="stylesheet" href="static/csss/aos.css">
 
   <link rel="stylesheet" href="static/csss/style.css">
+  
+  <link rel="stylesheet" href="static/css/style2.css">
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -288,7 +292,32 @@
 
           </div>
         </div>
+
+
+        <!--Floating Chat button--->
+            
+            <div id="sy-whatshelp">
+                <div class="sywh-services">
+                    <a href="{{url_for('chatbot')}}" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                        <i class="fa fa-commenting-o"></i>
+                    </a>
+                    <a href="" class="whatsapp" data-tooltip="WhatsApp" data-placement="left" target="_blank">
+                        <i class="fa fa-whatsapp"></i>
+                    </a>
+                    <a href="" class="call" data-tooltip="Call" data-placement="left">
+                        <i class="fa fa-phone"></i>
+                    </a>
+                </div>
+                <a class="sywh-open-services"  data-placement="left">
+                    <i class="fa fa-comments"></i>
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+            
+            <!---End Floating Chat--->
       </footer>
+
+
 
     </div> <!-- .site-wrap -->
 
@@ -303,7 +332,7 @@
     <script src="static/jss/jquery.fancybox.min.js"></script>
     <script src="static/jss/jquery.sticky.js"></script>
     <script src="static/jss/isotope.pkgd.min.js"></script>
-
+    <script src="static/js/jquery-chat.js"></script>
 
     <script src="static/jss/main.js"></script>
 
