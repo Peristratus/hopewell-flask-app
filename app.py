@@ -55,18 +55,18 @@ def chatbot():
 def test():
     if request.method == "POST":
         task = {
-            "name": request.form.get("name").lower(),
-            "title":request.form.get("title").lower(),
-            "test_date": request.form.get("due_date").lower(),
-            "pat_name":request.form.get("pat_name").lower(),
-            "pat_idnum": request.form.get("id_num").lower(),
-            "basic_metabolic_panel": request.form.get("bmp").lower(),
-            "brain_nautriuretic_peptide": request.form.get("bnp").lower(),
-            "complete_blood_count": request.form.get("cbc").lower(),
-            "glycated_hemoglobin": request.form.get("gh").lower(),
-            "lipid_panel": request.form.get("lp").lower(),
-            "liver_function_test": request.form.get("bnp").lower(),
-            "tyroid_function_test": request.form.get("bnp").lower(),
+            "name": request.form.get("name"),
+            "title":request.form.get("title"),
+            "test_date": request.form.get("due_date"),
+            "pat_name":request.form.get("pat_name"),
+            "pat_idnum": request.form.get("id_num"),
+            "basic_metabolic_panel": request.form.get("bmp"),
+            "brain_nautriuretic_peptide": request.form.get("bnp"),
+            "complete_blood_count": request.form.get("cbc"),
+            "glycated_hemoglobin": request.form.get("gh"),
+            "lipid_panel": request.form.get("lp"),
+            "liver_function_test": request.form.get("lft"),
+            "tyroid_function_test": request.form.get("tft"),
             "created_by": session["user"]
         }
         mongo.db.medtest.insert_one( task)
@@ -77,7 +77,30 @@ def test():
     role = mongo.db.users.find_one(
         {"username": session["user"]})["role"]
     return render_template("labwork.html", categories=categories, role=role)
-     
+
+
+@app.route("/procedure", methods=["GET", "POST"])
+def procedure():
+    if request.method == "POST":
+        proc = {
+            "name": request.form.get("name").lower(),
+            "title":request.form.get("title").lower(),
+            "procedure_date": request.form.get("due_date").lower(),
+            "pat_name":request.form.get("pat_name").lower(),
+            "pat_idnum": request.form.get("id_num").lower(),
+            "procedure_name": request.form.get("procedure_name").lower(),
+            "created_by": session["user"]
+        }
+        mongo.db.procedures.insert_one( proc)
+        flash("Procedure Sucessfully Submited")
+        return redirect(url_for("procedure"))
+
+    categories = mongo.db.procedures.find().sort("name", 1)
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+
+    return render_template("procedure.html", categories=categories, role=role)    
+
 
 @app.route("/get_tasks")
 def get_tasks():
@@ -194,6 +217,7 @@ def add_task():
     role = mongo.db.users.find_one(
         {"username": session["user"]})["role"]
     return render_template("add_task.html", categories=categories, role=role)
+
 
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
