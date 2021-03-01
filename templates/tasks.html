@@ -5,7 +5,7 @@
 
         <ul class="collapsible popout">
             {% for task in tasks %}
-                {% if session.user|lower == task.created_by|lower or (role == "doctor" and task.dr_name == task.dr_name) or (role =="patient" and task.pat_name == task.pat_name) %}
+                {% if (session.user|lower == task.created_by|lower) or (role == "doctor" and session.user|lower == task.dr_name|lower) or (role =="patient" and session.user|lower == task.pat_name) or (role =="nurse" and session.user|lower == task.dr_name) %}
 
             <li>
                 <div class="collapsible-header white-text light-blue darken-4 text-shadow">
