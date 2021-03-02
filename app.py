@@ -51,6 +51,11 @@ def chatbot():
     return render_template('chatbot.html')
 
 
+@app.route("/prescript")
+def prescript():
+    return render_template('prescriptions.html')
+
+
 @app.route("/test", methods=["GET", "POST"])
 def test():
     if request.method == "POST":
