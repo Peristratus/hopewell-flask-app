@@ -24,6 +24,9 @@
 
   <link rel="stylesheet" href="static/csss/style.css">
 
+  <link rel="stylesheet" href="static/css/style4.css">
+
+
   <script type="text/javascript" src= "https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"> </script>
 
         <script type="text/javascript">
@@ -139,14 +142,22 @@
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="emailaddress" name="email" >
               </div>
+             
               <div class="form-group">
                 <label for="message">Message</label>
                 <textarea name="projectsummary" id="summary" cols="30" rows="10" class="form-control"></textarea>
+                 <!---pop-up--->
+                <div class="popup d-flex flex-row">
+                    <span class="popuptext p-2" id="myPopup">Message Received!</span>
+                </div>
+              <!---End----->
               </div>
+              
               <div class="form-group">
-                <input type="submit" class="btn btn-primary py-3 px-5" value="Send Message">
+                <input type="submit" class="btn btn-primary py-3 px-5" value="Send Message" onclick="myFunction2()" >
                 <input type="submit" class="btn btn-primary py-3 px-5" value="Reset form" onclick="myFunction()" id="resetBtn">
               </div>
+              
             </form>
           </div>
           <div class="col-md-5">
@@ -309,6 +320,16 @@
           <script>
           function myFunction() {
            document.getElementById("myform").reset();
+            }
+          </script>
+
+            <script>
+            function myFunction2() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+            setTimeout(function() {
+            document.getElementById("myPopup").classList.toggle("show");
+                }, 5000);
             }
           </script>
 
