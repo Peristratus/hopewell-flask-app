@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content%}
+
+<h4 class ="center-align  light-blue-text text-darken-4">Prescription Form</h4>
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('procedure')}}">
+            <div class="card-panel">
+                 <!-- Doctor Full Name-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user prefix light-blue-text text-darken-4"></i>
+                        <input id="name" name="name" type="text" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" class="validate">
+                        <label for="name">Full Name</label>
+                    </div>
+                </div>
+                <!--Title-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-md prefix light-blue-text text-darken-4"></i>
+                        <input id="title" name="title" type="text" pattern="^([a-zA-Z]{5,10})" class="validate">
+                        <label for="title">Title</label>
+                    </div>
+                </div>
+                <!--Test Date-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                        <input id="due_date" name="due_date" type="text" class=" datepicker validate" required>
+                    <label for="due_date">Procedure Date</label>
+                    </div>
+                </div>
+
+                <!--Patient Name-->
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-hospital-user prefix light-blue-text text-darken-4"></i>
+                        <input id="pat_name" name="pat_name" type="text" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" class="validate">
+                        <label for="pat_name"> Patient Name</label>
+                    </div>
+                </div>
+                 
+               <!--Patient Id Number -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-id-card prefix light-blue-text text-darken-4"></i>
+                        <input id="id_num" name="id_num" type="text" pattern="^[0-9A-Z]{5}$" class="validate">
+                        <label for="id_num"> Patient Id Number </label>
+                    </div>
+                </div>
+
+                <!---Pharmarcy Name/Location-->
+
+                 <!--List-->
+                 <div class="row">
+                <div class="input-field col s12">
+                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <select id= "pharmacy_details" name= "pharmacy_details" class="validate" required>
+                        <option value="" disabled selected>Choose category</option>
+                         <option value="">Shoppers drug Mart-167 Snadhust st Brampton</option>
+                         <option value="">Shoppers drug Mart-197 Bond st Brampton</option>
+                         <option value="">Shoppers drug Mart-1171 King st West Toronto</option>
+                         <option value="">Shoppers drug Mart-11 Canva Ave Toronto </option>
+                         <option value="">Shoppers drug Mart-98 Weber Ave Mississauga</option>
+                         <option value="">Walmart-19 Carrignton st Berrie</option>
+                         <option value="">Walmart-22 Victoria st Brampton</option>
+                         <option value="">Walmart-678 St Johns st Toronto</option>
+                         <option value="">Walmart-219 Wellington st Mississauga </option>
+                         <option value="">Walmart-199 Blair wood ave Mississauga</option>
+                    </select>
+                    <label for= "pharmarcy_details">Pharmarcy Location</label>
+                </div>
+            </div>
+
+                <!--Medication Description-->
+                  <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-prescription-bottle-alt prefix light-blue-text text-darken-4"></i>
+                    <textarea id="medication_details" name="medication_details" minlength="5" 
+                    maxlength="200" class="materialize-textarea" required></textarea>
+                    <label for="medication_details">Please type the medication details </label>
+                </div>
+            </div>
+
+             <!--Additional Medication Info-->
+                  <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-notes-medical prefix light-blue-text text-darken-4"></i>
+                    <textarea id="additional_information" name="additional_information" minlength="5" 
+                    maxlength="200" class="materialize-textarea" required></textarea>
+                    <label for="additional_information">Additioanl Information </label>
+                </div>
+            </div>
+
+                <!--submit-->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                        Submit <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+           </div>
+        </form>
+    </div>
+            
+
+
+{% endblock %}
