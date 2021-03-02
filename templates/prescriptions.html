@@ -3,7 +3,7 @@
 
 <h4 class ="center-align  light-blue-text text-darken-4">Prescription Form</h4>
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('procedure')}}">
+        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('prescript')}}">
             <div class="card-panel">
                  <!-- Doctor Full Name-->
                 <div class="row">
@@ -26,7 +26,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                         <input id="due_date" name="due_date" type="text" class=" datepicker validate" required>
-                    <label for="due_date">Procedure Date</label>
+                    <label for="due_date">Prescription Date</label>
                     </div>
                 </div>
 
@@ -54,8 +54,8 @@
                  <div class="row">
                 <div class="input-field col s12">
                      <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-                    <select id= "pharmacy_details" name= "pharmacy_details" class="validate" required>
-                        <option value="" disabled selected>Choose category</option>
+                    <select id= "pharmarcy_location" name= "pharmarcy_location" class="validate" required>
+                        <option value="" disabled selected>Choose Location</option>
                          <option value="">Shoppers drug Mart-167 Snadhust st Brampton</option>
                          <option value="">Shoppers drug Mart-197 Bond st Brampton</option>
                          <option value="">Shoppers drug Mart-1171 King st West Toronto</option>
