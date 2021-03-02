@@ -51,9 +51,30 @@ def chatbot():
     return render_template('chatbot.html')
 
 
-@app.route("/prescript")
+@app.route("/prescript", methods=["GET", "POST"])
 def prescript():
-    return render_template('prescriptions.html')
+    if request.method == "POST":
+        proc = {
+            "name": request.form.get("name").lower(),
+            "title":request.form.get("title").lower(),
+            "prescription_date": request.form.get("due_date").lower(),
+            "pat_name":request.form.get("pat_name").lower(),
+            "pat_idnum": request.form.get("id_num").lower(),
+            "pharmarcy_location": request.form.get("pharmarcy_location").lower(),
+            "medication_details": request.form.get("medication_details").lower(),
+            "additional_information": request.form.get("additional_information").lower(),
+            "created_by": session["user"]
+        }
+        mongo.db.prescriptions.insert_one( proc)
+        flash("Prescription Submited")
+        return redirect(url_for("prescript"))
+
+    categories = mongo.db.prescriptions.find().sort("name", 1)
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+
+    return render_template("prescriptions.html", categories=categories, role=role)    
+
 
 
 @app.route("/test", methods=["GET", "POST"])
