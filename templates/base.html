@@ -19,7 +19,7 @@
         <!--top navbar-->
          <nav class = "nav-extended  text-shadow light-blue darken-4">
             <div class="nav-wrapper">
-                <a href="{{url_for('home')}}" class="brand-logo">HopeWell</a>
+                <a href="{{url_for('home')}}" class="brand-logo">MediStar</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
     
@@ -37,6 +37,12 @@
                     {% else %}
                         <li><a href="{{url_for('login')}}" >Login</a></li>
                         <li><a href="{{url_for('register')}}">Register</a></li>
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="#" ><i class="fas fa-user prefix light-blue-text text-darken-4"></i>Admin</a></li>
+                            <li><a href="{{url_for('doc')}}"> <i class="fas fa-user-md prefix light-blue-text text-darken-4"></i> Doctor</a></li>
+                        </ul>
+                        <a class="dropdown-trigger btn  light-blue darken-4" href="#" data-target="dropdown1">Admin</a>
+
                     {% endif %}
                     
                 </ul>
@@ -59,6 +65,9 @@
                     {% else %}
                         <li><a href="{{url_for('login')}}" >Login</a></li>
                         <li><a href="{{url_for('register')}}">Register</a></li>
+                         <li><a href="">Admin</a></li>
+                          <li><a href="{{url_for('doc')}}">Doctor</a></li>
+
                     {% endif %}
             </ul>
           
