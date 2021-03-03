@@ -195,6 +195,30 @@ def login():
         
 
 
+@app.route("/doc", methods=["GET", "POST"])
+def doc():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        if existing_user:
+            #ensure hased password matches user input
+            if check_password_hash(
+                existing_user["password"],request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
+            else:
+                #invalid user name
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for('doc'))
+        else:
+            #username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for('doc'))
+    return render_template("doclogin.html")
+        
 
 @app.route("/profile/<username>", methods=["GET","POST"])
 def profile(username):
