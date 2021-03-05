@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block content%}
+
+<h4 class ="center-align  light-blue-text text-darken-4">Register</h4>
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action= "{{url_for('medreg')}}">
+            <div class="card-panel">
+                 <!--Full Name-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user prefix light-blue-text text-darken-4"></i>
+                        <input id="name" name="name" type="text" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" class="validate">
+                        <label for="name">Full Name</label>
+                    </div>
+                </div>
+                <!--Email-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-envelope-open-text prefix light-blue-text text-darken-4"></i>
+                        <input id="email" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="validate">
+                        <label for="email">Email address</label>
+                    </div>
+                </div>
+
+                <!--Date of Birth-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                        <input id="bdate" name="bdate" type="text" class="datepicker" required>
+                        <label for="bdate">Date of Birth</label>
+                    </div>
+                </div>
+
+                <!--Id Number Card-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-id-card prefix light-blue-text text-darken-4"></i>
+                        <input id="id_num" name="id_num" type="text" pattern="^[0-9A-Z]{5}$" class="validate">
+                        <label for="id_num">Health Card 000AA </label>
+                    </div>
+                </div>
+
+                 <!--Role-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-id-card-alt prefix light-blue-text text-darken-4"></i>
+                        <input id="role" name="role" type="text" pattern="^[a-zA-Z]{5,20}$" class="validate">
+                        <label for="role">Designation </label>
+                    </div>
+                </div>
+
+                 <!--Address-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-address-book prefix light-blue-text text-darken-4"></i>
+                        <input id="address" name="address" type="text" class="validate">
+                        <label for="address">Address </label>
+                    </div>
+                </div>
+
+                 <!--Town-->
+                 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-building prefix light-blue-text text-darken-4"></i>
+                        <input id="town" name="town" type="text" class="validate">
+                        <label for="town">Town</label>
+                    </div>
+                </div>
+
+                 <!--City-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-city prefix light-blue-text text-darken-4"></i>
+                        <input id="city" name="city" type="text" class="validate">
+                        <label for="city">City</label>
+                    </div>
+                </div>
+
+                 <!--username-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+                        <input id="username" name="username" type="text" minlength="5"  maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                 <!--password-->
+               <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
+                        <input id="password" name ="password" type="password" minlength="5"  maxlength="15"  pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <!--register-->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                        Register <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+           </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+           <p class="center-align">
+               Already Registered ? 
+               <a href="{{url_for('doc')}}" class="light-blue-text text-darken-4">Login</a>
+           </p>
+        </div>
+   </div>
+            
+
+
+{% endblock %}
