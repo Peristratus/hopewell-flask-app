@@ -169,6 +169,40 @@ def register():
     return render_template("register.html")
 
 
+@app.route("/medreg", methods=["GET", "POST"])
+def medreg():
+    if request.method == "POST":
+        #check if existing username already exists in db
+        existing_user = mongo.db.employees.find_one(
+            {"username": request.form.get("username").lower()})
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("medreg"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+            "name": request.form.get("name").lower(),
+            "email": request.form.get("email").lower(),
+            "bdate": request.form.get("bdate").lower(),
+            "id_num": request.form.get("id_num").lower(),
+            "role": request.form.get("role").lower(),
+            "address": request.form.get("address").lower(),
+            "town": request.form.get("town").lower(),
+            "city": request.form .get("city").lower()
+
+        }
+        mongo.db.employees.insert_one(register)
+
+        #put the new user into 'session' cookie
+        session["user"]= request.form.get("username").lower()
+        flash("Registration Succesfull")
+        return redirect(url_for('medreg', username=session["user"]))
+
+    return render_template("medreg.html")
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
