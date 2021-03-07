@@ -1,5 +1,5 @@
-## Foxx Games Website
-![Project Image](/img/foxxgames.png)
+## Medistart Hospital Web app
+![Project Image](/static/images/medistar.png)
 
 --------
 
