@@ -179,7 +179,7 @@ def medreg():
             flash("Username already exists")
             return redirect(url_for("medreg"))
 
-        register = {
+        doc_register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "name": request.form.get("name").lower(),
@@ -192,7 +192,8 @@ def medreg():
             "city": request.form .get("city").lower()
 
         }
-        mongo.db.employees.insert_one(register)
+        
+        mongo.db.employees.insert_one(doc_register)
 
         #put the new user into 'session' cookie
         session["user"]= request.form.get("username").lower()
@@ -319,7 +320,7 @@ def add_task():
             "pat_name": request.form.get("pat_name").lower(),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one( task)
+        mongo.db.tasks.insert_one(task)
         flash("Task Sucessfully Added")
         return redirect(url_for("get_tasks"))
 
