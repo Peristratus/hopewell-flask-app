@@ -18,15 +18,20 @@
  ## Description
 
  This milestone project is part of my on going Full Stack Software Developer course at Canadian Business college in collaboration with the Code Instititute.
- The website is based on a fictional FOXX GAMES website, the website theme is based on vintage Atari, Nintendo and Sega games.The user will be able to 
- scroll through the web page, buy games and preview the classic 1979 Asteroid game in AI Mode, while the 2020 Asteriod game will be in play mode.
- I went through two tutorials and implemented the code, the results was two fully functional games, I also took a tutorial on Neural networks for 
- the 1979 Asteriod game and managed to  build a Neural network that enabled my computer to learn how to play the game, this resulted in an Artifical 
- inteligent software that became better over time as I allowed the computer to playing the game, the first score was 80,789 level 15 utilizing all 3 lives, 
- the second attempt was 97,980 level 17 utilizing all 3 lives, I now have a good understanding of neural networks and the math associated with neural networks, 
- I intend to continue improving on my skills by taking a course with intellipat and IBM on machine learning and eventually become certified for Machine learning and 
- Artifical Intelligence. This project is supposed to showcase my skills in HTML, CSS, JavaScript & Jquery. Other features include the intigation of Pay 
- Pal and emailjs API into the webdesign.The development of this website is purely for educational purposes and not intended for commercial use.
+ The website is based on a fictional Medistar Hospital webapp, the webapp theme is based on a hospital and their services to the general public.The user(s) will be able to 
+ navigate through the site, register as a patient, Doctor, nurse or admin, the information will be submitted into Mongodb database. The user wull also be able to interact
+ with an Artificial Intelligent chat bot that speaks to the user(s), at this momment the AI is able to have a meaningful conversation and respond to a 
+ Covid-19 emergency, dispatch paramedics to the patients residents or location, this is simulated and not a real live software, the AI has been coded 
+ to look for key words and phrases which trigger a response to the user, AI is also able to book appointments and inform the users Doctor of any pertinent information,
+ this is also simulated, but I hope to grow to the level where i will be able to code the AI to have these additional attributes. Once a user is registered and logs into their portal, they are paired 
+ with their doctor through the Mongodb, this enables user and Doctor to send short messages between themselves to either book appoinments , remind patient to monitor blood pressure,
+ Glucose level or check up with patient after surgery and etc. The Doctor is able to make request for prsecription, request for medical test(s) and procedure(s), all the information is submitted to Mongodb.
+ The doctors also have two AI tools at their disposal for disgnosis of Diabetes and Heart Disease, these tools are built on datasets from Kaggle and IEEE data port. The datasets are
+ based on machine learning for 400 - 1000 different individulas cases from various age groups, sex with a positive of nagative result. The AI for Diabetes is built on a threshold 1=Positive / 0= Negative.
+ The AI for Heart Disease Threshold >40 positive with 70 percent accuracy < 40 negative with 70 percent accuracy.
+ 
+ Disclaimer: The AI for diabetes , Heart Disease and AI chat bot are not built to be used for realworld applications but only developed for educational purposes, further testing and improvements are need
+ to further develop these tools.
  
 ----------------------------
  ## User-stories
