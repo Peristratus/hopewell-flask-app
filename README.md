@@ -93,9 +93,7 @@ Doctor Login | L-9.7 | Gain access to Medistar website | **As a** doctor **I wan
 Doctor Login | L-9.8 | Gain access to Medistar website | **As a** doctor **I want** to access the AI Diagnostic navlink **so that** I can gain access to the application.| **Given** that the user is on the medi web page, **When** they click on the AI Diagnostic nav-link**then** the system will take the doctor to the AI diagnostic tool for diabetes and Heart Disease . | M |
 Doctor Login | L-9.9 | Gain access to Medistar website | **As a** doctor **I want** to access the Manage Categories navlink **so that** I can gain access to the manage Categories page.| **Given** that the user is on the medi web page, **When** they click on the manage categories nav-link**then** the system will take the doctor to the manage categories page. | M |
 Doctor Login | L-9.10 | Gain access to Medistar website | **As a** doctor **I want** to access the Manage Categories navlink **so that** I can gain access to the manage Categories page.| **Given** that the user is on the medi web page, **When** they click on the manage categories nav-link**then** the system will take the doctor to the manage categories page. | M |
-
-
-Doctor Login | L-9.10 | Gain access to Medistar website | **As a** doctor **I want** to access the logout navlink **so that** I can logout.| **Given** that the user is on the medi web page, **When** they click on the logout nav-link**then** the system will log the user out. |  M  |
+Doctor Login | L-9.11 | Gain access to Medistar website | **As a** doctor **I want** to access the logout navlink **so that** I can logout.| **Given** that the user is on the medi web page, **When** they click on the logout nav-link**then** the system will log the user out. |  M  |
 
 
 ## User-Acceptance-Testing
