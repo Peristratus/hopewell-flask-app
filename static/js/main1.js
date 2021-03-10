@@ -129,18 +129,18 @@ function botVoice(message){
         
 
     if (message.includes('I accept')){
-               speech.text = " Your appointment has been booked, I will call you a day before your appointment to remind you, Please say thank you, to end this conversation or say continue to restart the conversation. ";
+               speech.text = " Your appointment has been booked, I will call you a day before your appointment to remind you, Please say exit, to end this conversation or say continue to restart the conversation. ";
         }
 
      if (message.includes('I decline')){
-               speech.text = "I will check for another date and get back to you via-email and a telephone call, Please say thank you, to end this conversation or say continue to restart the conversation.";
+               speech.text = "I will check for another date and get back to you via-email and a telephone call, Please say exit, to end this conversation or say continue to restart the conversation.";
         }
     
-    if (message.includes('thank you' )){
+    if (message.includes('exit' )){
                speech.text = "Thank you have a nice day and keep safe, always wear a mask and wash your hands, your well beign is important to us!"
         }
 
-    if (message.includes('6479')){
+    if (message.includes('647ux')){
                speech.text = "Thank you, your name is Samantha Jones, your doctor is Peter Dominic, what is the reason for your visit, please say follow up, or say urgent, or say new !"
         }
 
