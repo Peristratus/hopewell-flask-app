@@ -186,8 +186,8 @@ Technologies deployed on this project:
  12. Bootstrap Jquery 3.3.1 [Bootstrap](https://getbootstrap.com/)
  13. Bootstrap cnd font awesome [Bootstrap](https://www.bootstrapcdn.com/fontawesome/)
  14. AI chat bot framework and code in main1.js
- 15. AI Diabetes based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
- 16. AI Heart Disease based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
+ 15. AI Diabetes detection based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
+ 16. AI Heart Disease detection  based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
  17. Google [font](https://fonts.google.com/)
  18. For README.md file image and website images editing and styling Canva software [Canva](https://www.canva.com/)
   
