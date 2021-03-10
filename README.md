@@ -194,7 +194,7 @@ Technologies deployed on this project:
 
 ---------------------------------------------
 
- ##Deployment on Heroku
+ ##Deployment 
 
  After my User Acceptance Testing (UAT) I pushed the final version of my code to git hub , in my commit message I cataloged each change before my final push, the steps I took 
  can be seen below. 
