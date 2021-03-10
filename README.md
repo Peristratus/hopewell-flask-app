@@ -1,5 +1,5 @@
 ## Medistart Hospital Web app
-![Project Image](/static/images/medistar.png)
+![Project Image](/static/images/medistar1.png)
 
 --------
 
