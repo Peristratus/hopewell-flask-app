@@ -68,7 +68,7 @@ function botVoice(message){
     }
 
     if (message.includes('appointment')) {
-       speech.text = "what is the last four digits of your membership card ?";
+       speech.text = "what is the last four digits of your health card ?";
     }
 
     if (message.includes('continue')) {
