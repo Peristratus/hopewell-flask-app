@@ -180,10 +180,10 @@ Technologies deployed on this project:
  7.  Flask, JS and HTML syntax deployed on index.html,services.html,department.html,blog.html, contact.html,about.html, add_categor.html,add_task.html,adminlogin.html,base.html,categories.html,chatbot.html
      doclogin.html, edit_category.html, edit_task.html,labwork.html,login.html,medreg.html,prescription.html,procedures.html,profile.html,register.html and task.html
  8.  CSS code sequence and syntax deployed for style1.css,style2.css, style3.css and style4.css and CSSS folder.
- 9.  Java script code sequence and syntax deployed for jquery-chat.js, main1.js, script.js  and sendEmail.js and JSS folder.
- 10. Jquery script code sequence and syntax deployed in index.html, services.html and sendEmails.js
+ 9.  Java script code sequence and syntax deployed for main1.js, script.js, sendEmail.js and JSS folder.
+ 10. Jquery script code sequence and syntax deployed in index.html, services.html, jquery-chat.js and sendEmails.js
  11. Bootstrap cnd 4.4.1 [Bootstrap](https://getbootstrap.com/)
- 12. Bootstrap Jquery 3.4.1 [Bootstrap](https://getbootstrap.com/)
+ 12. Bootstrap Jquery 3.3.1 [Bootstrap](https://getbootstrap.com/)
  13. Bootstrap cnd font awesome [Bootstrap](https://www.bootstrapcdn.com/fontawesome/)
  14. AI chat bot framework and code in main1.js
  15. AI Diabetes based on [Peristratus-github]()
@@ -194,18 +194,18 @@ Technologies deployed on this project:
 
 ---------------------------------------------
 
- ## Final push/commit
+ ##Deployment on Heroku
+
  After my User Acceptance Testing (UAT) I pushed the final version of my code to git hub , in my commit message I cataloged each change before my final push, the steps I took 
  can be seen below. 
 
  1. Complete the User UAT evaluation and made sure that all codes are funtional and operational.
  2. Used git commit -m to catalog all my changes in line with UAT requirement.
  3. Used git push to push my final version to my git hub repository. 
- 5. Clicked on select branch drop down menu and then selected master.
+ 
 
-## Heroku Depoloyment
- Before my final push on github I had already deployed my project on Herouku to check connectivity and clicked on the automatic deploy from master to ensure that all changes on github are reflected on heroku.
- Steps for deployment can be seen below, my project is now live on [Heroku](https://hopewell-hospiria-project.herokuapp.com/)
+ Before my final push on github I had already deployed my project on Herouku to check connectivity and I clicked on the automatic deploy from master to ensure that all changes on github are reflected on heroku.
+ Steps for deployment can be seen below, my project is now live on Heroku [Medstar Hospital](https://hopewell-hospiria-project.herokuapp.com/)
  
  1. Create the env.py
  2  Created the gitignore file to ignor the _pycache_ and env.py
@@ -219,22 +219,20 @@ Technologies deployed on this project:
  10. Connect github Peristratus respository to Heroku
  11. Click on reveal config vars Input IP, MONGO_DB, MONGO_URI, PORT and SECRET_KEY values, save them.
  12. Click on Automatic deploy master branch 
- 13. create the PROCFILE
- 14. Click on Deploy branch and wait for Heroku to build the logs and deploy the webapp.
+ 13. Click on Deploy branch and wait for Heroku to build the logs and deploy the webapp.
  
 
 -----------------------------------------------
 
 ## References
 
-I would like to make references to cetain educational Youtube tutorials and certain articles that have helped with my webdesign develop my skills as a Fullstack developer.
+I would like to make references to certain educational Youtube tutorials and certain articles that have helped with my webdesign develop my skills as a Fullstack developer.
 
 
-1. Online tutorials youtube video on 1979 Asteroid game & Neural Networks [Freecode-camp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ )
-2. Online tutorials youtube video on new Asteroid game [Chris-course](https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA)
+1. Online tutorials AI for Diabetes and Heart Disease detection [computetr-science](https://www.youtube.com/channel/UCbmb5IoBtHZTpYZCDBOC1CA )
+2. webapp Template from [Colorlib](https://colorlib.com/wp/templates/)
 3. HTML/CSS security by sqreen online article [sqreen](https://www.sqreen.com/checklists/html-css-security-checklist)
 4. Input patterns online article [HTML.com](https://html.com/attributes/input-pattern/)
-5. online tutorial youtube gamewebsite [Onclickmedia](https://www.youtube.com/channel/UCVY0KRdGfxPi97RBINcM5Tg/videos)
 
 -----------------------------------------------
 
@@ -242,11 +240,10 @@ I would like to make references to cetain educational Youtube tutorials and cert
 
 All icons,logos and videos used on my website are only for educational purposes and will not be used for the commercial version:
 
-1. Atari, Nintendo, Sega games random images from [google](https://www.google.com/) search engine.
-2. Hero images random from [google](https://www.google.com/) search engine.
-3. Footer icons [fontawesome](https://fontawesome.com/v4.7.0/icons/)
-4. Music for 2020 Asteriod game from Youtube [MP3music](https://www.youtube.com/watch?v=mGx_FATyasQ)
-5. Music and sounds for 1979 Asteriod game from [Freecode-camp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
+1. Free random images from [google](https://www.google.com/) search engine.
+2. Footer icons [fontawesome](https://fontawesome.com/v4.7.0/icons/)
+3. video from [Youtube](https://www.youtube.com/watch?v=JpC9jEcG8lI)
+4. Streamlit deployment on Heroku [Data-Professor](https://www.youtube.com/watch?v=zK4Ch6e1zq8)
 
 -----------------------------------------------
 
