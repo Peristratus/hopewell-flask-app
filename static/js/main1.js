@@ -140,7 +140,7 @@ function botVoice(message){
                speech.text = "Thank you have a nice day and keep safe, always wear a mask and wash your hands, your well beign is important to us!"
         }
 
-    if (message.includes('647ux')){
+    if (message.includes('647 ux')){
                speech.text = "Thank you, your name is Samantha Jones, your doctor is Peter Dominic, what is the reason for your visit, please say follow up, or say urgent, or say new !"
         }
 
