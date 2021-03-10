@@ -233,6 +233,7 @@ I would like to make references to certain educational Youtube tutorials and cer
 2. webapp Template from [Colorlib](https://colorlib.com/wp/templates/)
 3. HTML/CSS security by sqreen online article [sqreen](https://www.sqreen.com/checklists/html-css-security-checklist)
 4. Input patterns online article [HTML.com](https://html.com/attributes/input-pattern/)
+5. Streamlit deployment on Heroku [Data-Professor](https://www.youtube.com/watch?v=zK4Ch6e1zq8)
 
 -----------------------------------------------
 
@@ -243,7 +244,6 @@ All icons,logos and videos used on my website are only for educational purposes 
 1. Free random images from [google](https://www.google.com/) search engine.
 2. Footer icons [fontawesome](https://fontawesome.com/v4.7.0/icons/)
 3. video from [Youtube](https://www.youtube.com/watch?v=JpC9jEcG8lI)
-4. Streamlit deployment on Heroku [Data-Professor](https://www.youtube.com/watch?v=zK4Ch6e1zq8)
 
 -----------------------------------------------
 
