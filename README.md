@@ -171,10 +171,10 @@ far with Code institute and the Canadian Business College.
 Technologies deployed on this project:
 
  1.  Languages deployed on project HTML,CSS,JavaScript, python, pymongo, mongodb, streamlit.
- 2.  Frame work utilized on project [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+ 2.  Frame work utilized on project [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Jinja](https://jinja.palletsprojects.com/en/2.11.x/).
  3.  Mongodb [database](https://www.mongodb.com/cloud/atlas/efficiency?utm_source=google&utm_campaign=gs_americas_canada_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624311&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5ffvPXY0bwt7fz3Put6WagLEy7NpMTIi8vnJJSrszCj9dreEowUL-waAkxHEALw_wcB)
- 4.  Streamlit [framwork](https://streamlit.io/)
- 5.  Webapp live deployment with [Heroku]https://www.heroku.com/
+ 4.  Streamlit [Data-apps](https://streamlit.io/)
+ 5.  Webapp live deployment with [Heroku](https://www.heroku.com/
  5.  libaries utilized on project in requirements.txt
  6.  For coding enviroment /IDE github [GitHub](http://github.com)
  7.  Flask, JS and HTML syntax deployed on index.html,services.html,department.html,blog.html, contact.html,about.html, add_categor.html,add_task.html,adminlogin.html,base.html,categories.html,chatbot.html
