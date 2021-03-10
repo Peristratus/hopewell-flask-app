@@ -170,34 +170,58 @@ far with Code institute and the Canadian Business College.
 
 Technologies deployed on this project:
 
- 1.  For email API plug in [emailjs](https://www.emailjs.com/)
- 2.  For Payment API plug in [Paypal](https://developer.paypal.com/developer/accounts/)
- 3.  For README.md file image and website images editing and styling Canva software [Canva](https://www.canva.com/)
- 4.  For coding enviroment /IDE github [GitHub](http://github.com)
- 5.  HTML 5 code sequence and syntax deployed for index.html,cancel.html,gmenue.html,payment1.html, payment2.html, payment3.html, success.html and cancel.html
- 6.  CSS code sequence and syntax deployed for style.css,style1.css,style2.css, style3.css and style4.css
- 7.  Java script code sequence and syntax deployed for index.html, asterold.html, asternew.js,neural_network.js,payment.js,smooth_scrooll.js and sendEmail.js
- 8.  Jquery script code sequence and syntax deployed in index.html and sendEmails.js
- 9.  Bootstrap cnd 4.4.1 [Bootstrap](https://getbootstrap.com/)
- 10. Bootstrap Jquery 3.4.1 [Bootstrap](https://getbootstrap.com/)
- 11. Bootstrap cnd font awesome [Bootstrap](https://www.bootstrapcdn.com/fontawesome/)
- 12. For CSS plugin [Trailwind](https://tailwindcss.com/)
- 13. Font Google Poppins & Yellow tail  [Fontgoogle](https://fonts.google.com/)
- 14. Tutorial on [Neural-Networks](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
- 15. Scroll effect on index.html [Smooth-scroll](http://github.com/cferdinandi/smooth-scroll )
+ 1.  Languages deployed on project HTML,CSS,JavaScript, python, pymongo, mongodb, streamlit.
+ 2.  Frame work utilized on project [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+ 3.  Mongodb [database](https://www.mongodb.com/cloud/atlas/efficiency?utm_source=google&utm_campaign=gs_americas_canada_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624311&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5ffvPXY0bwt7fz3Put6WagLEy7NpMTIi8vnJJSrszCj9dreEowUL-waAkxHEALw_wcB)
+ 4.  Streamlit [framwork](https://streamlit.io/)
+ 5.  Webapp live deployment with [Heroku]https://www.heroku.com/
+ 5.  libaries utilized on project in requirements.txt
+ 6.  For coding enviroment /IDE github [GitHub](http://github.com)
+ 7.  Flask, JS and HTML syntax deployed on index.html,services.html,department.html,blog.html, contact.html,about.html, add_categor.html,add_task.html,adminlogin.html,base.html,categories.html,chatbot.html
+     doclogin.html, edit_category.html, edit_task.html,labwork.html,login.html,medreg.html,prescription.html,procedures.html,profile.html,register.html and task.html
+ 8.  CSS code sequence and syntax deployed for style1.css,style2.css, style3.css and style4.css and CSSS folder.
+ 9.  Java script code sequence and syntax deployed for jquery-chat.js, main1.js, script.js  and sendEmail.js and JSS folder.
+ 10. Jquery script code sequence and syntax deployed in index.html, services.html and sendEmails.js
+ 11. Bootstrap cnd 4.4.1 [Bootstrap](https://getbootstrap.com/)
+ 12. Bootstrap Jquery 3.4.1 [Bootstrap](https://getbootstrap.com/)
+ 13. Bootstrap cnd font awesome [Bootstrap](https://www.bootstrapcdn.com/fontawesome/)
+ 14. AI chat bot framework and code in main1.js
+ 15. AI Diabetes based on [Peristratus-github]()
+ 16. AI Heart Disease based on [Peristratus-github]()
+ 17. Google [font](https://fonts.google.com/)
+ 18. For README.md file image and website images editing and styling Canva software [Canva](https://www.canva.com/)
   
 
 ---------------------------------------------
 
- ## Deployment
+ ## Final push/commit
  After my User Acceptance Testing (UAT) I pushed the final version of my code to git hub , in my commit message I cataloged each change before my final push, the steps I took 
- can be seen below, my project is now live on [GitHub](https://peristratus.github.io/foxxgames/)
+ can be seen below. 
 
  1. Complete the User UAT evaluation and made sure that all codes are funtional and operational.
  2. Used git commit -m to catalog all my changes in line with UAT requirement.
  3. Used git push to push my final version to my git hub repository. 
- 4. Clicked on settings on my Peristratus/bootstrap repository and scrolled down to github pages.
  5. Clicked on select branch drop down menu and then selected master.
+
+## Heroku Depoloyment
+ Before my final push on github I had already deployed my project on Herouku to check connectivity and clicked on the automatic deploy from master to ensure that all changes on github are reflected on heroku.
+ Steps for deployment can be seen below, my project is now live on [Heroku](https://hopewell-hospiria-project.herokuapp.com/)
+ 
+ 1. Create the env.py
+ 2  Created the gitignore file to ignor the _pycache_ and env.py
+ 3. Installed libaries and loged them in requitements.txt
+ 4. Create the PROCFILE
+ 5. Login to Heroku 
+ 6. Click on create new app
+ 7. Choose app name
+ 8. Choose country USA
+ 9. Click on Navlink Deploy
+ 10. Connect github Peristratus respository to Heroku
+ 11. Click on reveal config vars Input IP, MONGO_DB, MONGO_URI, PORT and SECRET_KEY values, save them.
+ 12. Click on Automatic deploy master branch 
+ 13. create the PROCFILE
+ 14. Click on Deploy branch and wait for Heroku to build the logs and deploy the webapp.
+ 
 
 -----------------------------------------------
 
