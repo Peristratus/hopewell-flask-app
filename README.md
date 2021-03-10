@@ -175,21 +175,21 @@ Technologies deployed on this project:
  3.  Mongodb [database](https://www.mongodb.com/cloud/atlas/efficiency?utm_source=google&utm_campaign=gs_americas_canada_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624311&gclid=Cj0KCQiA1pyCBhCtARIsAHaY_5ffvPXY0bwt7fz3Put6WagLEy7NpMTIi8vnJJSrszCj9dreEowUL-waAkxHEALw_wcB)
  4.  Streamlit [Data-apps](https://streamlit.io/)
  5.  Webapp live deployment with [Heroku](https://www.heroku.com/)
- 5.  Libaries utilized on project in requirements.txt
- 6.  For coding enviroment /IDE github [GitHub](http://github.com)
- 7.  Flask, JS and HTML syntax deployed on index.html,services.html,department.html,blog.html, contact.html,about.html, add_categor.html,add_task.html,adminlogin.html,base.html,categories.html,chatbot.html
+ 6.  Libaries utilized on project in requirements.txt
+ 7.  For coding enviroment /IDE github [GitHub](http://github.com)
+ 8.  Flask, JS and HTML syntax deployed on index.html,services.html,department.html,blog.html, contact.html,about.html, add_categor.html,add_task.html,adminlogin.html,base.html,categories.html,chatbot.html
      doclogin.html, edit_category.html, edit_task.html,labwork.html,login.html,medreg.html,prescription.html,procedures.html,profile.html,register.html and task.html
- 8.  CSS code sequence and syntax deployed for style1.css,style2.css, style3.css and style4.css and CSSS folder.
- 9.  Java script code sequence and syntax deployed for main1.js, script.js, sendEmail.js and JSS folder.
- 10. Jquery script code sequence and syntax deployed in index.html, services.html, jquery-chat.js and sendEmails.js
- 11. Bootstrap cnd 4.4.1 [Bootstrap](https://getbootstrap.com/)
- 12. Bootstrap Jquery 3.3.1 [Bootstrap](https://getbootstrap.com/)
- 13. Bootstrap cnd font awesome [Bootstrap](https://www.bootstrapcdn.com/fontawesome/)
- 14. AI chat bot framework and code in main1.js
- 15. AI Diabetes detection based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
- 16. AI Heart Disease detection  based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
- 17. Google [font](https://fonts.google.com/)
- 18. For README.md file image and website images editing and styling Canva software [Canva](https://www.canva.com/)
+ 9.  CSS code sequence and syntax deployed for style1.css,style2.css, style3.css and style4.css and CSSS folder.
+ 10.  Java script code sequence and syntax deployed for main1.js, script.js, sendEmail.js and JSS folder.
+ 11. Jquery script code sequence and syntax deployed in index.html, services.html, jquery-chat.js and sendEmails.js
+ 12. Bootstrap cnd 4.4.1 [Bootstrap](https://getbootstrap.com/)
+ 13. Bootstrap Jquery 3.3.1 [Bootstrap](https://getbootstrap.com/)
+ 14. Bootstrap cnd font awesome [Bootstrap](https://www.bootstrapcdn.com/fontawesome/)
+ 15. AI chat bot framework and code in main1.js
+ 16. AI Diabetes detection based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
+ 17. AI Heart Disease detection  based on [Peristratus-github](https://github.com/Peristratus/covid19_Xray_detection)
+ 18. Google [font](https://fonts.google.com/)
+ 19. For README.md file image and website images editing and styling Canva software [Canva](https://www.canva.com/)
   
 
 ---------------------------------------------
