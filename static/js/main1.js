@@ -145,7 +145,7 @@ function botVoice(message){
         }
 
     if (message.includes('urgent')) {
-                   speech.text = "Your doctor will give you a call at 16:45 hours today. Say thank you to end this conversation or say continue to restart the conversation ?  "
+                   speech.text = "Your doctor will give you a call at 16:45 hours today. Say exit to end this conversation or say continue to restart the conversation ?  "
         }
     if (message.includes('follow up')) {
                    speech.text = "Your doctor will be able to see you on the 14th of March 2021, If you accept, say I accept, if you decline say I decline ?  "
