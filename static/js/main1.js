@@ -136,7 +136,7 @@ function botVoice(message){
                speech.text = "I will check for another date and get back to you via-email and a telephone call, Please say exit, to end this conversation or say continue to restart the conversation.";
         }
     
-    if (message.includes('exit' ) || message.includes('thank you')){
+    if (message.includes('exit')){
                speech.text = "Thank you have a nice day and keep safe, always wear a mask and wash your hands, your well beign is important to us!"
         }
 
