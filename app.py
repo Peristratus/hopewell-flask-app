@@ -136,6 +136,16 @@ def get_tasks():
     return render_template("tasks.html", tasks=tasks, role=role)
 
 
+@app.route("/search", methods=["GET","POST" ])
+def search():
+    query =request.form.get("query")
+    tasks = list(mongo.db.tasks.find({"$text":{"$search": query}}))
+    role = mongo.db.users.find_one(
+        {"username": session["user"]})["role"]
+    return render_template("tasks.html", tasks=tasks, role=role)
+
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
