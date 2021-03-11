@@ -336,7 +336,7 @@ def add_task():
         return redirect(url_for("get_tasks"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    role = mongo.db.tasks.find_one(
+    role = mongo.db.users.find_one(
         {"username": session["user"]})["role"]
     return render_template("add_task.html", categories=categories, role=role)
 
