@@ -204,6 +204,7 @@ def medreg():
         }
         
         mongo.db.employees.insert_one(doc_register)
+        mongo.db.users.insert_one(doc_register)
 
         #put the new user into 'session' cookie
         session["user"]= request.form.get("username").lower()
