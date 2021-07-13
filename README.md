@@ -19,7 +19,7 @@
 
  This milestone project is part of my on going Full Stack Software Developer course at Canadian Business college in collaboration with the Code Instititute.
  The website is based on a fictional Medistar Hospital Flask app, the app's theme is based on a hospital and their services to the general public.The user(s) will be able to 
- navigate through the site, register as a patient, Doctor, nurse or admin, the information will be submitted into Mongodb database. The user wull also be able to interact
+ navigate through the site, register as a patient, Doctor, nurse or admin, the information will be submitted into Mongodb database. The user will also be able to interact
  with an Artificial Intelligent chat bot that speaks to the user(s), at this momment the AI is able to have a meaningful conversation and respond to a 
  Covid-19 emergency, dispatch paramedics to the patients residents or location, this is simulated and not a real live software, the AI has been coded 
  to look for key words and phrases which trigger a response to the user, AI is also able to book appointments and inform the users Doctor of any pertinent information,
